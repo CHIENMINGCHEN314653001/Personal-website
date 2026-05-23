@@ -1,4 +1,3 @@
-
 :root{
   --accent:#F5D042; 
   --text:#EDF2F4; 
@@ -56,7 +55,7 @@ nav.scrolled{
 .nav-links a{
   color:var(--text);
   text-decoration:none;
-  opacity:2;
+  opacity:1;
   padding: 6px 12px;
   border-radius: 20px;
   transition: all 0.3s ease; 
@@ -204,7 +203,7 @@ header h2{margin:6px 0 12px;color:rgba(255,255,255,0.85)}
 .project-body{flex:1;color:var(--text)}
 .project-body h3{margin-top:0}
 .tags{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
-.tags span{background:rgba(255,255,255,0.06);Padding:6px 10px;border-radius:8px;font-size:13px}
+.tags span{background:rgba(255,255,255,0.06);padding:6px 10px;border-radius:8px;font-size:13px}
 
 /* --- 聯絡我 --- */
 .socials{
@@ -249,12 +248,12 @@ footer{
 }
 /* --- 頭像漸進縮小與移動效果 --- */
 #profile-img {
-  position: absolute; /* 一開始跟 header 一起排版 */
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 0.05s linear;
   z-index: 1;
+  will-change: transform, left, top;
 }
 #profile-img img {
   width: 200px;
@@ -398,6 +397,3 @@ nav.galaxy::after {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
-
-
